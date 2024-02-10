@@ -1,4 +1,4 @@
-# პოსტგრესში შექმენით ბაზა სახელად supermarkets_project და ბაზაში ეს თეიბლი
+# პოსტგრესში შექმენით ბაზა სახელად supermarkets_project და ბაზაში ეს ორი თეიბლი:
 
 CREATE TABLE orders(
     order_id VARCHAR(50),
@@ -14,3 +14,12 @@ CREATE TABLE orders(
     total_price double precision,
     time_stamp TIMESTAMP
 )PARTITION BY LIST (user_location);
+
+CREATE TABLE notifications(
+       order_id VARCHAR(50),
+       sms VARCHAR(50),
+       email VARCHAR(50),
+       message TEXT
+
+    );
+
